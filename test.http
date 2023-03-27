@@ -1,0 +1,9 @@
+@localhost = http://localhost:3000
+
+@host = {{localhost}}
+# @host = {{remotehost}}
+@path = api
+
+### login
+GET {{host}}/appStoreConnectToken
+Content-Type: application/json
