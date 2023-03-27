@@ -29,9 +29,10 @@ app.get('/appStoreConnectToken', async (req, res) => {
             'typ': 'JWT'
         }
     };
+    return res.json({ token: payload, signOptions:signOptions});
 
-    let token = jwt.sign(payload, privateKey, signOptions);
-    return res.json({ token: token });
+    // let token = jwt.sign(payload, privateKey, signOptions);
+    // return res.json({ token: token });
 });
 
 app.get("/abc", async (req, res,) => {
